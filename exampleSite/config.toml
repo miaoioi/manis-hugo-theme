@@ -6,6 +6,7 @@ pluralizeListTitles = false
 paginate = 10								# Minimum number of item before paginate navigation show up
 canonifyURL = true
 disqusShortname = ""                        # Your disqus shortname
+footnotereturnlinkcontents = "↩"
 
 [taxonomies]
 	tag = "tags"
@@ -31,7 +32,7 @@ disqusShortname = ""                        # Your disqus shortname
 
 	# Code Highlighting (HighlightJS)
 	highlightJs = true
-	highlightJsLanguages = [ "go" ]
+	highlightJsLanguages = [ "go", "python", "matlab" ]
 	highlightJsStyle = "ocean"
 
 	# Social Links
