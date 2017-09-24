@@ -6,6 +6,7 @@ pluralizeListTitles = false
 paginate = 10								# Minimum number of item before paginate navigation show up
 canonifyURL = true
 disqusShortname = ""                        # Your disqus shortname
+enableEmoji = true                          # Emoji emoticons support for page content; see emoji-cheat-sheet.com
 footnotereturnlinkcontents = "↩"
 
 [taxonomies]
