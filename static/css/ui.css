@@ -110,7 +110,11 @@ h6 {
   h6 { font-size: 1.7rem; }
 }
 
-p { margin-top: 0; }
+p {
+  margin-top: 0;
+  text-align: justify;
+  text-justify: inter-character;
+}
 
 #brand {
   text-align: left;
