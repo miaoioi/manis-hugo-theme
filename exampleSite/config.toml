@@ -31,6 +31,8 @@ footnotereturnlinkcontents = "↩"
 	faviconImg = ""                         # Path to site's favicon image
 	dateFmt = "Jan 02, 2006"                # Date format in item list
 
+	texEqNumbers = "AMS"                    # Default: "AMS", or "all" every displayed equation to be numbered
+
 	# Code Highlighting (HighlightJS)
 	highlightJs = true
 	highlightJsLanguages = [ "go", "python", "matlab" ]
