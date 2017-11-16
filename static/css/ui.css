@@ -207,20 +207,14 @@ pre > code {
 
 /* #Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #e1e1e1;
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
 }
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee }
 
 /* #Blockquote
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -291,7 +285,6 @@ pre,
 blockquote,
 dl,
 figure,
-table,
 p,
 ul,
 ol {
@@ -325,7 +318,7 @@ hr {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 [class^="icon"] {
