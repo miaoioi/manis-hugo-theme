@@ -184,6 +184,10 @@ ul.no-bullet {
 
 dd { margin-left: 2rem; }
 
+.task-list {
+  list-style-type: none;
+}
+
 /* #Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
