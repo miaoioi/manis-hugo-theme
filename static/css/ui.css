@@ -128,6 +128,9 @@ p {
   color: #898989;
   margin-bottom: -.2rem;
 }
+#related h3 {
+  text-align: left;
+}
 
 
 /* #Links
@@ -181,6 +184,10 @@ ul.no-bullet {
     margin-right: 1rem;
     display: inline;
   }
+}
+.terms li>span {
+  color: #666;
+  font-family: monospace;
 }
 
 dd { margin-left: 2rem; }
@@ -271,6 +278,9 @@ blockquote cite a {
   }
 }
 
+.post-nav {
+  margin-bottom: 2rem;
+}
 .next-post {
   display: block;
   text-align: right;
@@ -294,6 +304,11 @@ p,
 ul,
 ol {
   margin-bottom: 1.5rem; }
+
+#brand {
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
 
 /* #Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -346,11 +361,11 @@ img {
   .no-print {
     display: none;
   }
-  
+
   pre > code {
     white-space: pre-wrap;
   }
-  
+
   img {
     display: block;
     width: 80%;

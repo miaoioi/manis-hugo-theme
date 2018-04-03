@@ -1,6 +1,4 @@
-# Site's URL
 baseURL = "http://yurizal-san.com/"
-# Site's Name
 title = "Manis"
 theme = "manis"
 # Copyright notice. Note: You can use HTML tag here
@@ -11,9 +9,9 @@ paginate = 10
 canonifyURL = true
 # Your disqus shortname
 disqusShortname = ""
-enableEmoji = true                          # Emoji emoticons support for page content; see emoji-cheat-sheet.com
 footnotereturnlinkcontents = "↩"
-# Your disqus shortname
+# Edit this if you want to translate your blog
+defaultContentLanguage = "en"
 
 [taxonomies]
 	tag = "tags"
@@ -62,8 +60,6 @@ footnotereturnlinkcontents = "↩"
 
 
 # Language Configuration
-defaultContentLanguage = "en"
-# Edit this if you want to translate your blog
 #[languages.in]
 #	lang = "in"
 #	languageName = "Bahasa Indonesia"
