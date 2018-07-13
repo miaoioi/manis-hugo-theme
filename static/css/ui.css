@@ -144,7 +144,7 @@ a:hover { text-decoration: underline; }
 ul { list-style: disc inside; }
 ol { list-style: decimal inside; }
 ol, ul {
-  padding-left: 0;
+  padding-left: 1.2rem;
   margin-top: 0;
 }
 ul ul,
@@ -157,6 +157,9 @@ ol ul {
 li {
   margin-bottom: .5rem;
   margin-left: .5rem;
+}
+li > p {
+  margin-bottom: .3rem;
 }
 
 ul.no-bullet {
@@ -211,7 +214,7 @@ code {
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre;
+  white-space: pre-wrap;
   background: #2b303b;
   color: #c0c5ce;
   font-family: 'Fira Mono', monospace;

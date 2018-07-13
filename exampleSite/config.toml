@@ -1,17 +1,24 @@
-baseURL = "http://yurizal-san.com/"
+baseURL = "example.com"
 title = "Manis"
 theme = "manis"
+
 # Copyright notice. Note: You can use HTML tag here
 copyright = "&copy; 2018 Yurizal Susanto"
 pluralizeListTitles = false
+
 # Minimum number of posts before paginate navigation show up
 paginate = 10
-canonifyURL = true
+
 # Your disqus shortname
 disqusShortname = ""
 footnotereturnlinkcontents = "↩"
+
 # Edit this if you want to translate your blog
 defaultContentLanguage = "en"
+
+# Code Highlighting (Chroma)
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [taxonomies]
 	tag = "tags"
@@ -19,8 +26,11 @@ defaultContentLanguage = "en"
 [params]
 	# If false, use minified CSS (ui.min.css)
 	debugCSS = false
+	# Custom CSS
+	customCSS = []
+
 	# List of sections support disqus comments
-	disqusSections = ["blog"]
+	disqusSections = [ "blog" ]
 	# Site meta description
 	description = "Sweet little Hugo's theme for personal website or blog."
 	# Site's Tagline (Subtitle or Keyword)
