@@ -341,16 +341,12 @@ hr {
 }
 
 img {
-<<<<<<< HEAD
   max-width: 100%
 }
 
 article img {
   display: block;
   margin: 0 auto;
-=======
-  max-width: 100%;
->>>>>>> 6f15d0b2fc1328fcb1fc640b29b4e21192bf09e1
 }
 
 [class^="icon"] {
