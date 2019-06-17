@@ -111,7 +111,11 @@ h6 {
   h6 { font-size: 1.7rem; }
 }
 
-p { margin-top: 0; }
+p {
+  margin-top: 0;
+  text-align: justify;
+  text-justify: inter-character;
+}
 
 #brand {
   text-align: left;
@@ -137,8 +141,8 @@ a:hover { text-decoration: underline; }
 
 /* #Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul { list-style: square; }
-ol { list-style: decimal; }
+ul { list-style: disc inside; }
+ol { list-style: decimal inside; }
 ol, ul {
   padding-left: 1.2rem;
   margin-top: 0;
@@ -191,6 +195,10 @@ ul.no-bullet {
 
 dd { margin-left: 2rem; }
 
+.task-list {
+  list-style-type: none;
+}
+
 /* #Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
@@ -206,7 +214,7 @@ code {
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre-wrap;
+  white-space: pre;
   background: #2b303b;
   color: #c0c5ce;
   font-family: 'Fira Mono', monospace;
@@ -214,20 +222,14 @@ pre > code {
 
 /* #Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #e1e1e1;
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
 }
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee }
 
 /* #Blockquote
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -301,11 +303,10 @@ pre,
 blockquote,
 dl,
 figure,
-table,
 p,
 ul,
 ol {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.5rem; }
 
 #brand {
   margin-top: 1rem;
@@ -333,19 +334,23 @@ ol {
 /* #Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   border-width: 0;
   border-top: 1px solid #e1e1e1;
 }
 
 img {
+<<<<<<< HEAD
   max-width: 100%
 }
 
 article img {
   display: block;
   margin: 0 auto;
+=======
+  max-width: 100%;
+>>>>>>> 6f15d0b2fc1328fcb1fc640b29b4e21192bf09e1
 }
 
 [class^="icon"] {
