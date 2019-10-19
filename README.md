@@ -3,9 +3,21 @@
 It's a minimalist and responsive theme for Hugo Static Site Generator. It's
 name taken from Indonesian Language for *Sweet*.
 
-> Note: Manis going to follow [SEMVER](https://semver.org/) scheme from now. It's mean you can clone this repository from master without breaking.
-
 ![Manis' Mockup Device](https://raw.githubusercontent.com/yursan9/manis-hugo-theme/master/images/mockup.jpg)
+
+## Table of Contents
+
+- [Features](https://github.com/yursan9/manis-hugo-theme#features)
+- [Get Started](https://github.com/yursan9/manis-hugo-theme#get-started)
+  + [Theme Only](https://github.com/yursan9/manis-hugo-theme#theme-only)
+- [Configuration](https://github.com/yursan9/manis-hugo-theme#configuration)
+  + [Change Latest Section](https://github.com/yursan9/manis-hugo-theme#change-latest-section)
+  + [Custom CSS](https://github.com/yursan9/manis-hugo-theme#custom-css)
+  + [Disqus Configuration](https://github.com/yursan9/manis-hugo-theme#disqus-configuration)
+  + [Making Own Navigation Bar](https://github.com/yursan9/manis-hugo-theme#making-own-navigation-bar)
+  + [Other Language](https://github.com/yursan9/manis-hugo-theme#other-language)
+- [Development](https://github.com/yursan9/manis-hugo-theme#development)
+- [License](https://github.com/yursan9/manis-hugo-theme#license)
 
 ## Features
 
@@ -18,6 +30,7 @@ Like I said, it's really minimal. Its doesn't even have grid or anything nice li
 -   Social Icon Links.
 -   No Grid no worry.
 -   Disqus Support.
+-   [Utterances](https://utteranc.es) Support.
 -   Translatable.
 
 ![Manis' Homepage view](https://raw.githubusercontent.com/yursan9/manis-hugo-theme/master/images/blue-red.png)
@@ -30,12 +43,12 @@ If this is your first time using Hugo, and you want to use this theme. Follow th
 mkdir name_of_web
 cd name_of_web
 git clone https://github.com/yursan9/manis-hugo-theme themes/manis
-cp theme/manis/exampleSite/config.toml config.toml
-hugo new blog/_index.md
-hugo new work/_index.md
+cp themes/manis/exampleSite/config.toml config.toml
+hugo new blog/hello.md
 ```
 
-Edit the `config.toml` according to your preference. Then edit `content/blog/_index.md` and `content/work/_index.md` by following [this section](#making-own-navigation-bar). (Look at the `exampleSite/content` for example.)
+Edit the `config.toml` according to your preference. Then edit `content/blog/hello.md` to
+start writing your first post. (Look at the `exampleSite/content` for example.)
 
 ### Theme Only
 
@@ -62,14 +75,35 @@ For configuration example you can look at the `exampleSite/config.toml` (and cop
 
 ### Change Latest Section
 
-By default this theme needs `blog` and `work` section to works. You can edit which sections show up as latest posts and latest works by editing `postSection` and `workSection`. `workSection` is optional.
+You can edit which sections show up as latest posts and latest works by editing `mainSections` and `workSections`. `workSections` is optional.
 
 ```toml
-# Configure which section for Latest Posts
-postSection = "blog"
-# Configure which section for Latest Works
-workSection = "work"
+# Configure which sections for Latest Posts
+mainSections = ["blog", "post"]
+# Configure which sections for Latest Works
+workSections = ["work"]
 ```
+
+### Custom CSS
+If you want to make a change for this theme, other than forking, you can also supplied custom CSS. Maybe you want to change the font or size of image or icon, then custom CSS is your pal.
+
+First, edit your `config.toml`, add the custom CSS filenames to `custom CSS`. You can supplied more than one custom CSS. Just be aware of the CSS load order.
+
+```
+[params]
+    customCSS = ["/css/icon.css"]
+```
+
+Then, make a new `static/css/icon.css` file. After that you can write your custom CSS to that file:
+
+```
+.icon-social {
+    width: 2rem;
+    height: 2rem;
+} 
+```
+
+If you follow the above instruction, you will change the size of icon on footer without forking the theme.
 
 ### Disqus Configuration
 To add Disqus support, edit your site `config.toml`. Add your discus' shortname to `disqusShortname` and add list of sections that you want to support disqus to `params.disqusSections`:
@@ -78,43 +112,25 @@ To add Disqus support, edit your site `config.toml`. Add your discus' shortname 
 disqusShortname = "your-disqus-shortname"
 
 [params]
-  disqusSections = ["blog"]
+    disqusSections = ["blog"]
 ```
 
 ### Making Own Navigation Bar
 
-Top navigation bar in Manis is made automatically by making new `section/_index.md`. Example if you want to add new `about` section, you can do the following command:
+Top navigation bar in Manis is made by configuring the navigation bar in `config.toml` with the following code:
 
 ```
-hugo new about/_index.md
-```
-
-Edit the file `content/about/_index.md` and make sure the front matter is formatted like this:
-
-```toml
-+++
-title = "Get To Know Me"
-menu = "main"
-+++
-```
-
-`title` will be the string that is shown in navigation bar and the page's title (the title doesn't need to be the same as section's directory name). `menu = "main"` is the one who make Hugo know, it's need to add a new item in navigation bar.
-
-**Alternative navigation bar:**
-
-Or you can configure the navigation bar in `config.toml` with the following code:
-```
-
 [menu]
-	[[menu.main]]
-		name = "Blog"
-		url = "/post/"
-	
-	[[menu.main]]
-		name = "About"
-		url = "/about"
+    [[menu.main]]
+        name = "Blog"
+        url = "/post/"
+
+    [[menu.main]]
+        name = "About"
+        url = "/about"
 
 ```
+
 ### Other Language
 
 Manis already translated to Bahasa Indonesia. But, if you want to translate this theme to your own language, look for the example in `i18n/en.yaml` and `i18n/in.yaml`.
@@ -124,9 +140,9 @@ And then you edit the site's `config.toml` like this.
 ```toml
 defaultContentLanguage = "en"
 [languages.{Your Language Code}]
-  lang = "{Your Language Code}"
-  languageName = "{Your Language Name. example; Bahasa Indonesia or Japanese}"
-  weight = 1
+    lang = "{Your Language Code}"
+    languageName = "{Your Language Name. example; Bahasa Indonesia or Japanese}"
+    weight = 1
 ```
 
 ## Development

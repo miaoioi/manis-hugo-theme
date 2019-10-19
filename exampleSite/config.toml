@@ -22,9 +22,9 @@ pygmentsUseClasses = true
 
 [menu]
 	[[menu.main]]
-		name = "Blog"
+		name = "Post"
 		url = "/post/"
-	
+
 	[[menu.main]]
 		name = "About"
 		url = "/about"
@@ -37,9 +37,6 @@ pygmentsUseClasses = true
 	debugCSS = false
 	# Custom CSS
 	customCSS = []
-
-	# List of sections support disqus comments
-	disqusSections = [ "blog" ]
 	# Site meta description
 	description = "Sweet little Hugo's theme for personal website or blog."
 	# Site's Tagline (Subtitle or Keyword)
@@ -49,17 +46,27 @@ pygmentsUseClasses = true
 	# URL to license file, can be outside of your domain
 	licenseURL = "/about/license"
 
-	# Configure which section for Latest Posts
-	postSection = "post"
-	# Configure which section for Latest Works
-	workSection = ""
+	# Configure which sections for Latest Posts
+	mainSections = ["blog", "post"]
+	# Configure which sections for Latest Works
+	workSections = ["work"]
+
+	# List of sections that support disqus comments
+	disqusSections = [ "blog" ]
+	# List of sections that support utterances comments
+	utterancesSections = [ "blog" ]
+
+	# Utterances Configuration
+	utterancesRepo = ""
+	utterancesTheme = "github-light"
+	utterancesLabel = ""
 
 	# 404 Configuration
 	head404 = "Sorry, I can't find what you want."
 	sub404 = "Back to <a href='/'>Home</a>."
 
 	# Color of your website's accent
-	colorTheme = "#ff8181"
+	colorTheme = "#ff6565"
 	# Maximum number of item in Latest Posts or Works
 	latestCount = 3
 	# Path to site's favicon image
