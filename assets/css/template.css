@@ -112,11 +112,7 @@ h6 {
   h6 { font-size: 1.7rem; }
 }
 
-p {
-  margin-top: 0;
-  text-align: justify;
-  text-justify: inter-character;
-}
+p { margin-top: 0; }
 
 #brand {
   text-align: left;
@@ -145,8 +141,8 @@ a:hover { text-decoration: underline; }
 
 /* #Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul { list-style: disc inside; }
-ol { list-style: decimal inside; }
+ul { list-style: square; }
+ol { list-style: decimal; }
 ol, ul {
   padding-left: 1.2rem;
   margin-top: 0;
@@ -199,10 +195,6 @@ ul.no-bullet {
 
 dd { margin-left: 2rem; }
 
-.task-list {
-  list-style-type: none;
-}
-
 /* #Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
@@ -218,7 +210,7 @@ code {
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre;
+  white-space: pre-wrap;
   background: #2b303b;
   color: #c0c5ce;
   font-family: 'Fira Mono', monospace;
@@ -227,14 +219,20 @@ pre > code {
 
 /* #Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
 }
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee }
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
 
 /* #Blockquote
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -318,10 +316,11 @@ pre,
 blockquote,
 dl,
 figure,
+table,
 p,
 ul,
 ol {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2.5rem; }
 
 #brand {
   margin-top: 1rem;
@@ -349,8 +348,8 @@ ol {
 /* #Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #e1e1e1;
 }
